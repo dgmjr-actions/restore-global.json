@@ -17,8 +17,12 @@ inputs:
 runs:
   using: composite
   steps: 
-    - id: Download the File
-      run: dotnet file add ${{ inputs.repo }}
+    - id: See if dotnet-file tool is installed
+    - run: ./scrips/
       shell: bash
     - id: Restore dotnet-file
-    - id: Download the file
+      run: if [ -z $dotnetFileExists ]
+        then 
+          dotnet tool install --global dotnet-file 
+        fi
+      shell: bash
