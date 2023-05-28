@@ -1,0 +1,24 @@
+name: Download a file using dotnet-file
+author: David G. Moore, Jr., <david@dgmjr.io>
+description: Downloads a file using the dotnet-file tool
+
+inputs:
+  repo: 
+    description: The repository from which to download the file
+    required: true
+  filename:
+    description: The filename/path within the repo to get
+    required: true
+  destination-path:
+    description: The destination path of the file (defaults to '.')
+    required: false
+    default: .
+
+runs:
+  using: composite
+  steps: 
+    - id: Download the File
+      run: dotnet file add ${{ inputs.repo }}
+      shell: bash
+    - id: Restore dotnet-file
+    - id: Download the file
