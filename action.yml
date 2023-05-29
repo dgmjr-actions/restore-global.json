@@ -1,28 +1,13 @@
 name: Download a file using dotnet-file
 author: David G. Moore, Jr., <david@dgmjr.io>
-description: Downloads a file using the dotnet-file tool
-
-inputs:
-  repo: 
-    description: The repository from which to download the file
-    required: true
-  filename:
-    description: The filename/path within the repo to get
-    required: true
-  destination-path:
-    description: The destination path of the file (defaults to '.')
-    required: false
-    default: .
+description: Downloads global.json using the dotnet-file tool
 
 runs:
   using: composite
   steps: 
-    - id: Ensure dotnet-file tool is installed
-      run: ./scrips/ensure-dotnet-file-is-installed.sh
-      shell: bash
-    - id: Restore dotnet-file
-      run: if [ -z $dotnetFileExists ]
-        then 
-          dotnet tool install --global dotnet-file 
-        fi
-      shell: bash
+    - id: Download global.json
+      uses: dgmjr-actions/download-a-file-using-dotnet-file
+      with: 
+        repo: dgmjr-io
+        filename: global.json
+
