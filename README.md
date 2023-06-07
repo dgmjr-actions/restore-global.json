@@ -1,16 +1,16 @@
 ---
-title: Restore `dotnet-file`
+title: Download `global.json`
 authors:
   - dgmjr
-description: Restores the `dotnet-file` tool
+description: Restores the `global.json` tool
 keywords:
   - github actions
   - ci/cd
 slug: restore-dotnet-file
 project: Dgmjr.Actions
 type: readme
+license: MIT
 ---
+# Download `global.json`
 
-# Restore `dotnet-file`
-
-Restores the `dotnet-file` tool.
+Restores the `global.json` file.
