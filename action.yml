@@ -6,7 +6,7 @@ runs:
   using: composite
   steps: 
     - id: Download-global-json
-      uses: dgmjr-actions/download-a-file-using-dotnet-file
+      uses: dgmjr-actions/download-a-file-using-dotnet-file@v0.0.1
       with: 
         repo: dgmjr-io
         filename: global.json
