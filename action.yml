@@ -5,7 +5,7 @@ description: Downloads global.json using the dotnet-file tool
 runs:
   using: composite
   steps: 
-    - id: Download global.json
+    - id: Download-global-json
       uses: dgmjr-actions/download-a-file-using-dotnet-file
       with: 
         repo: dgmjr-io
