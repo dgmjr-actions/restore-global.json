@@ -1,6 +1,6 @@
 ---
 authors:
-- dgmjr
+  - dgmjr
 title: The MIT License
 license: MIT
 lastmod: 2023-01-11T02:45:34.204Z
@@ -12,6 +12,7 @@ keywords:
 description: The MIT License
 date: 2023-01-16T11:55:48.194Z
 slug: mit-license
+type: license
 ---
 # MIT License
 
