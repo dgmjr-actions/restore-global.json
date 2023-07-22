@@ -1,0 +1,20 @@
+
+name: CI Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+  
+jobs:
+  ci-build:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Call the action
+        uses: dgmjr-actions/download-global.json@main
+      - name: Check to make sure the file is there
+        shell: bash
+        run: if [ -z $(ls global.json | grep global.json| ]; then exit 1; fi;
