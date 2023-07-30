@@ -9,5 +9,5 @@ runs:
       uses: dgmjr-actions/download-a-file-using-dotnet-file@main
       with: 
         repo: dgmjr-io
-        filename: global.json
+        filename: tree/main/global.json
 
