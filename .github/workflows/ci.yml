@@ -17,4 +17,4 @@ jobs:
         uses: dgmjr-actions/download-global.json@main
       - name: Check to make sure the file is there
         shell: bash
-        run: if [ -z $(ls global.json | grep global.json| ]; then exit 1; fi;
+        run: if [ -z $(ls global.json | grep global.json) ]; then exit 1; fi;
