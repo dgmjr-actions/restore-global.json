@@ -2,6 +2,11 @@ name: Download a file using dotnet-file
 author: David G. Moore, Jr., <david@dgmjr.io>
 description: Downloads global.json using the dotnet-file tool
 
+inputs:
+  token:
+    type: string
+    name: token
+
 runs:
   using: composite
   steps: 
@@ -10,4 +15,5 @@ runs:
       with: 
         repo: dgmjr-io/dgmjr-io
         filename: tree/main/global.json
+        token: ${{ inputs.token }}
 
