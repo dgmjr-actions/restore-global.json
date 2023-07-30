@@ -8,6 +8,6 @@ runs:
     - id: Download-global-json
       uses: dgmjr-actions/download-a-file-using-dotnet-file@main
       with: 
-        repo: dgmjr-io
+        repo: dgmjr-io/dgmjr-io
         filename: tree/main/global.json
 
