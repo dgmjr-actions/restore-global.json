@@ -16,4 +16,4 @@ runs:
         repo: dgmjr-io/dgmjr-io
         filename: tree/main/global.json
         token: ${{ inputs.token }}
-
+        
