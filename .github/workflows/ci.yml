@@ -17,6 +17,12 @@ jobs:
         uses: dgmjr-actions/download-global.json@main
         with: 
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Check to make sure the file is there
+      - name: Check to make sure the global.json file is there
         shell: bash
         run: if [ -z $(ls global.json | grep global.json) ]; then exit 1; fi;
+      - name: Check to make sure the file is there
+        shell: bash
+        run: if [ -z $(ls Directory.Build.props | grep Directory.Build.props) ]; then exit 1; fi;
+      - name: Check to make sure the Directory.Build.targets file is there
+        shell: bash
+        run: if [ -z $(ls  Directory.Build.targets | grep  Directory.Build.targets) ]; then exit 1; fi;
