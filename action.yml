@@ -16,4 +16,16 @@ runs:
         repo: dgmjr-io/dgmjr-io
         filename: tree/main/global.json
         token: ${{ inputs.token }}
+    - id: Download-Directory-Build-props
+      uses: dgmjr-actions/download-a-file-using-dotnet-file@main
+      with: 
+        repo: dgmjr-io/dgmjr-io
+        filename: tree/main/Directory.Build.props
+        token: ${{ inputs.token }}
+    - id: Download-Directory-Build-targets
+      uses: dgmjr-actions/download-a-file-using-dotnet-file@main
+      with: 
+        repo: dgmjr-io/dgmjr-io
+        filename: tree/main/Directory.Build.targets
+        token: ${{ inputs.token }}
         
