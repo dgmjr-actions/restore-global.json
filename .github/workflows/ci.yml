@@ -16,7 +16,7 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v3.2.0 
         with:
-          version: 8.0.x
+          dotnet-version: 8.0.x
       - name: Call the action
         uses: dgmjr-actions/download-global.json@main
         with: 
