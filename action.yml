@@ -1,31 +1,35 @@
-name: Download a file using dotnet-file
+name: Download global.json
 author: David G. Moore, Jr., <david@dgmjr.io>
 description: Downloads global.json using the dotnet-file tool
 
+branding:
+  icon: download-cloud
+  color: blue
+
 inputs:
   token:
-    type: string
-    name: token
+    required: true
+    description: GitHub Token
 
 runs:
   using: composite
-  steps: 
+  steps:
     - id: Download-global-json
       uses: dgmjr-actions/download-a-file-using-dotnet-file@main
-      with: 
+      with:
         repo: dgmjr-io/dgmjr-io
         filename: tree/main/global.json
         token: ${{ inputs.token }}
     - id: Download-Directory-Build-props
       uses: dgmjr-actions/download-a-file-using-dotnet-file@main
-      with: 
+      with:
         repo: dgmjr-io/dgmjr-io
         filename: tree/main/Directory.Build.props
         token: ${{ inputs.token }}
     - id: Download-Directory-Build-targets
       uses: dgmjr-actions/download-a-file-using-dotnet-file@main
-      with: 
+      with:
         repo: dgmjr-io/dgmjr-io
         filename: tree/main/Directory.Build.targets
         token: ${{ inputs.token }}
-        
+
