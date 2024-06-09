@@ -10,6 +10,9 @@ inputs:
   token:
     required: true
     description: GitHub Token
+  restore-dotnet-file:
+    required: false
+    default: true
 
 runs:
   using: composite
@@ -20,6 +23,7 @@ runs:
         repo: dgmjr-io/dgmjr-io
         filename: tree/main/global.json
         token: ${{ inputs.token }}
+        restore-dotnet-file: ${{ inputs.restore-dotnet-file }}
     - id: Download-Directory-Build-props
       uses: dgmjr-actions/download-a-file-using-dotnet-file@main
       with:
